@@ -1,0 +1,42 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Menu container styles */
+.menu {
+    background-color: #333;
+    /* Dark background for menu */
+    padding: 1rem;
+
+    &__list {
+        display: flex;
+        /* Horizontal menu */
+        justify-content: center;
+        list-style: none;
+        /* Remove bullets */
+        gap: 2rem;
+        /* Space between menu items */
+    }
+
+    &__item {
+        margin: 0;
+
+        a {
+            color: #fff;
+            /* White text color */
+            text-decoration: none;
+            /* Remove underline */
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: #007bff;
+                /* Blue text on hover */
+            }
+        }
+    }
+}

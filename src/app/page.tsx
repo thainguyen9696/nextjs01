@@ -1,95 +1,80 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+// app/page.tsx
+import Link from 'next/link';
+import './styles/home.scss';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <div className="home">
+      <header className="home__header">
+        {/* <Menu /> */}
+        <h1>Welcome to 3D Print Master</h1>
+        <p>
+          Discover our cutting-edge 3D printing products and services designed for both personal and business needs.
+        </p>
+      </header>
+
+      <section className="home__featured">
+        <h2>Featured Products</h2>
+        <div className="home__featured-products">
+          <div className="product">
+            <h3>3D Printer Model X</h3>
+            <p>Price: $2999</p>
+            <Link href="/products/1">Learn More</Link>
+          </div>
+          <div className="product">
+            <h3>3D Printer Model Y</h3>
+            <p>Price: $3999</p>
+            <Link href="/products/2">Learn More</Link>
+          </div>
+          <div className="product">
+            <h3>3D Printer Model X</h3>
+            <p>Price: $2999</p>
+            <Link href="/products/3">Learn More</Link>
+          </div>
+          <div className="product">
+            <h3>3D Printer Model X</h3>
+            <p>Price: $2999</p>
+            <Link href="/products/1">Learn More</Link>
+          </div>
+          <div className="product">
+            <h3>3D Printer Model Y</h3>
+            <p>Price: $3999</p>
+            <Link href="/products/2">Learn More</Link>
+          </div>
+          <div className="product">
+            <h3>3D Printer Model X</h3>
+            <p>Price: $2999</p>
+            <Link href="/products/3">Learn More</Link>
+          </div>
+          {/* Có thể thêm các sản phẩm khác */}
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      <section className="home__services">
+        <h2>Our 3D Printing Services</h2>
+        <p>
+          We offer professional 3D printing services starting at $99. Whether you need prototypes, custom designs, or production parts,
+          our expert team is here to help.
+        </p>
+      </section>
+
+      <section className="home__additional">
+        <h2>Why Choose Us?</h2>
+        <p>
+          Our state-of-the-art technology and experienced professionals ensure high-quality prints with quick turnaround times.
+          Explore our range of products and services to see how we can bring your ideas to life!
+        </p>
+      </section>
+
+      <section className="home__contact">
+        <h2>Get in Touch</h2>
+        <div className="home__contact-social">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
+          <a href="https://zalo.me" target="_blank" rel="noopener noreferrer">Zalo</a>
+        </div>
+      </section>
     </div>
   );
 }
